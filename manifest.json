@@ -2,12 +2,15 @@
   "name": "WHO Failed",
   "short_name": "WHO Failed",
   "description": "Pandemic crisis management — you are the WHO coordinator on day one of a global outbreak.",
-  "start_url": "./index.html",
+  "start_url": "./index.htmlhttps://andreyfilat.github.io/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#0a1a30",
   "theme_color": "#163559",
-  "categories": ["games", "simulation"],
+  "categories": [
+    "games",
+    "simulation"
+  ],
   "icons": [
     {
       "src": "icon-192.png",
