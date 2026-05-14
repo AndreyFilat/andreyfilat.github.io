@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="35%" r="80%">
+      <stop offset="0%" stop-color="#2a5589"/>
+      <stop offset="50%" stop-color="#163559"/>
+      <stop offset="100%" stop-color="#0a1a30"/>
+    </radialGradient>
+    <radialGradient id="virusBody" cx="35%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#ff9b9b"/>
+      <stop offset="55%" stop-color="#ef4b4b"/>
+      <stop offset="100%" stop-color="#a02525"/>
+    </radialGradient>
+    <linearGradient id="spike" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff9b9b"/>
+      <stop offset="100%" stop-color="#c83030"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ef4b4b" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#ef4b4b" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#ef4b4b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Full background (extends to all edges for adaptive icon shapes) -->
+  <rect width="512" height="512" fill="url(#bg)"/>
+
+  <!-- Background stars -->
+  <g fill="rgba(255,255,255,0.06)">
+    <circle cx="60" cy="80" r="3"/>
+    <circle cx="430" cy="60" r="4"/>
+    <circle cx="90" cy="420" r="3"/>
+    <circle cx="460" cy="380" r="3"/>
+    <circle cx="380" cy="450" r="2"/>
+  </g>
+
+  <!-- Scale virus content to fit within 80% safe zone (centered, scaled by 0.8) -->
+  <!-- Original virus was ~412px wide (from 100 to 412). Now scale & center in 410px (80% of 512) -->
+  <g transform="translate(256, 256) scale(0.8) translate(-256, -256)">
+
+    <!-- Glow halo -->
+    <circle cx="256" cy="256" r="220" fill="url(#glow)"/>
+
+    <!-- Medallion ring -->
+    <circle cx="256" cy="256" r="180" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="6"/>
+    <circle cx="256" cy="256" r="172" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+
+    <!-- Body shadow -->
+    <ellipse cx="256" cy="380" rx="120" ry="14" fill="rgba(0,0,0,0.35)"/>
+
+    <!-- Spikes with caps -->
+    <g>
+      <line x1="256" y1="160" x2="256" y2="100" stroke="url(#spike)" stroke-width="14" stroke-linecap="round"/>
+      <circle cx="256" cy="95" r="14" fill="url(#virusBody)"/>
+      <circle cx="251" cy="91" r="5" fill="rgba(255,255,255,0.5)"/>
+
+      <line x1="256" y1="352" x2="256" y2="412" stroke="url(#spike)" stroke-width="14" stroke-linecap="round"/>
+      <circle cx="256" cy="417" r="14" fill="url(#virusBody)"/>
+      <circle cx="251" cy="413" r="5" fill="rgba(255,255,255,0.5)"/>
+
+      <line x1="160" y1="256" x2="100" y2="256" stroke="url(#spike)" stroke-width="14" stroke-linecap="round"/>
+      <circle cx="95" cy="256" r="14" fill="url(#virusBody)"/>
+      <circle cx="91" cy="251" r="5" fill="rgba(255,255,255,0.5)"/>
+
+      <line x1="352" y1="256" x2="412" y2="256" stroke="url(#spike)" stroke-width="14" stroke-linecap="round"/>
+      <circle cx="417" cy="256" r="14" fill="url(#virusBody)"/>
+      <circle cx="413" cy="251" r="5" fill="rgba(255,255,255,0.5)"/>
+
+      <line x1="324" y1="188" x2="368" y2="144" stroke="url(#spike)" stroke-width="13" stroke-linecap="round"/>
+      <circle cx="372" cy="140" r="13" fill="url(#virusBody)"/>
+      <circle cx="368" cy="136" r="4" fill="rgba(255,255,255,0.5)"/>
+
+      <line x1="188" y1="188" x2="144" y2="144" stroke="url(#spike)" stroke-width="13" stroke-linecap="round"/>
+      <circle cx="140" cy="140" r="13" fill="url(#virusBody)"/>
+      <circle cx="136" cy="136" r="4" fill="rgba(255,255,255,0.5)"/>
+
+      <line x1="324" y1="324" x2="368" y2="368" stroke="url(#spike)" stroke-width="13" stroke-linecap="round"/>
+      <circle cx="372" cy="372" r="13" fill="url(#virusBody)"/>
+      <circle cx="368" cy="368" r="4" fill="rgba(255,255,255,0.5)"/>
+
+      <line x1="188" y1="324" x2="144" y2="368" stroke="url(#spike)" stroke-width="13" stroke-linecap="round"/>
+      <circle cx="140" cy="372" r="13" fill="url(#virusBody)"/>
+      <circle cx="136" cy="368" r="4" fill="rgba(255,255,255,0.5)"/>
+    </g>
+
+    <!-- Body -->
+    <circle cx="256" cy="256" r="96" fill="url(#virusBody)"/>
+    <ellipse cx="225" cy="225" rx="42" ry="28" fill="rgba(255,255,255,0.4)"/>
+    <path d="M 168 280 A 96 96 0 0 0 344 280 L 344 256 L 168 256 Z" fill="rgba(0,0,0,0.12)"/>
+
+    <g fill="rgba(0,0,0,0.22)">
+      <circle cx="230" cy="232" r="6"/>
+      <circle cx="278" cy="244" r="5"/>
+      <circle cx="244" cy="280" r="7"/>
+      <circle cx="290" cy="290" r="5"/>
+      <circle cx="220" cy="290" r="5"/>
+      <circle cx="280" cy="220" r="4"/>
+    </g>
+
+    <!-- Eyes -->
+    <g>
+      <circle cx="232" cy="250" r="10" fill="#1e2a3a"/>
+      <circle cx="280" cy="250" r="10" fill="#1e2a3a"/>
+      <circle cx="234" cy="246" r="3.5" fill="#fff"/>
+      <circle cx="282" cy="246" r="3.5" fill="#fff"/>
+    </g>
+
+    <path d="M 240 285 Q 256 278 272 285" stroke="rgba(0,0,0,0.35)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
